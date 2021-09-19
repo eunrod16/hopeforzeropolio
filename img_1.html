@@ -87,7 +87,7 @@
 					<img src="images/img_1.jpg" alt="End Polio" class="img-rounded img-responsive"></p>
 
 				</div>
-				<div class="col-md-6 col-sm-12">
+				<div id="info" class="col-md-6 col-sm-12">
 				<div style="font-size: 20px;line-height: 50px;">
 					<b>Francisco García</b> </br>
 					La esperanza es una melodía azul</br>
@@ -96,7 +96,7 @@
 					<b>Técnica</b>	Mixta sobre papel</br>
 					<b>Año</b>	2021
 				</div>
-				<a style="text-decoration:none" href="https://wa.me/50253434866" target="_blank"  class="btn btn-success" >Comprar por Whatsapp <i class="icon-message"></i></a>
+				<a id="btn-whatsapp" style="text-decoration:none; display:none" href="https://wa.me/50253434866" target="_blank"  class="btn btn-success" >Comprar por Whatsapp <i class="icon-message"></i></a>
 			</div>
 
         	</div>
@@ -135,45 +135,14 @@
 	<script src="js/salvattore.min.js"></script>
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
-	<script type="module" >
+	<script>
+	var flag = null;
+	$.getJSON( "https://hopeforzeropolio-default-rtdb.firebaseio.com/1K0E2vMHB-kMPZ_XJfne_zXU2zN5gNNgPwbm8sq3FSWE/ControlPaginaWeb/1/0.json", function( data ) {
 
-	  // Import the functions you need from the SDKs you need
-	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
-	  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
-	  import { getDatabase } from "firebase/database";
-	  // TODO: Add SDKs for Firebase products that you want to use
-	  // https://firebase.google.com/docs/web/setup#available-libraries
-
-	  // Your web app's Firebase configuration
-	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-	  const firebaseConfig = {
-	    apiKey: "AIzaSyBE7JXdNv-C777licyYNJxMXXfRLLExxtU",
-	    authDomain: "hopeforzeropolio.firebaseapp.com",
-	    databaseURL: "https://hopeforzeropolio-default-rtdb.firebaseio.com",
-	    projectId: "hopeforzeropolio",
-	    storageBucket: "hopeforzeropolio.appspot.com",
-	    messagingSenderId: "269093879816",
-	    appId: "1:269093879816:web:b001353772d6c46466d1bd",
-	    measurementId: "G-T3MCBBLXBM"
-	  };
-
-	  // Initialize Firebase
-	  const app = initializeApp(firebaseConfig);
-	  const analytics = getAnalytics(app);
-	  // Get a reference to the database service
-	  var database = app.database();
-
-
-
-
-	const db = getDatabase();
-	const starCountRef = ref(db, '001/');
-	onValue(starCountRef, (snapshot) => {
-	  const data = snapshot.val();
-	  console.log(data)
-	  //updateStarCount(postElement, data);
+	  flag=data;
+    if(!flag)$('<span class="badge bg-danger">VENDIDA</span>').appendTo( "#info" );
+		else $('#btn-whatsapp').show()
 	});
-
 	</script>
 
 

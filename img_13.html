@@ -97,7 +97,7 @@
 					<b>Técnica</b> Acuarela sobre papel </br>
 					<b>Año</b>	2019
 				</div>
-				<a style="text-decoration:none" href="https://wa.me/50253434866" target="_blank"  class="btn btn-success" >Comprar por Whatsapp <i class="icon-message"></i></a>
+					<a id="btn-whatsapp" style="text-decoration:none; display:none" href="https://wa.me/50253434866" target="_blank"  class="btn btn-success" >Comprar por Whatsapp <i class="icon-message"></i></a>
 			</div>
 
         	</div>
@@ -136,7 +136,15 @@
 	<script src="js/salvattore.min.js"></script>
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
+	<script>
+	var flag = null;
+	$.getJSON( "https://hopeforzeropolio-default-rtdb.firebaseio.com/013.json", function( data ) {
 
+	  flag=data;
+    if(!flag)$('<span class="badge bg-danger">VENDIDA</span>').appendTo( "#info" );
+		else $('#btn-whatsapp').show()
+	});
+	</script>
 
 
 

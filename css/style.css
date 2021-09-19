@@ -1731,14 +1731,7 @@ a.bg-warning:focus {
   background-color: #f7ecb5;
 }
 
-.bg-danger {
-  background-color: #f2dede;
-}
 
-a.bg-danger:hover,
-a.bg-danger:focus {
-  background-color: #e4b9b9;
-}
 
 .page-header {
   padding-bottom: 9px;
@@ -3732,6 +3725,22 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
   background-color: #fff;
   border-color: #ccc;
+}
+.badge {
+  display: inline-block;
+  padding: .55em 4em;
+  font-size: em;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  letter-spacing: 2px;
+}
+ .bg-danger {
+    --bs-bg-opacity: 1;
+    background-color: #ff0909;;
 }
 .btn-default .badge {
   color: #fff;

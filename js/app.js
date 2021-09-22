@@ -24,7 +24,7 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   // Get a reference to the database service
-  var database = app.database();
+  //var database = app.database();
 
 
 /*

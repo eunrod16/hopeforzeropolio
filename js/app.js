@@ -2,7 +2,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
-  import { getDatabase } from "firebase/database";
+  //import { getDatabase } from "firebase/database";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,7 +26,7 @@
   var database = app.database();
 
 
-
+/*
 
 const db = getDatabase();
 const starCountRef = ref(db, '001/');
@@ -35,3 +35,4 @@ onValue(starCountRef, (snapshot) => {
   console.log(data)
   //updateStarCount(postElement, data);
 });
+*/
